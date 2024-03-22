@@ -1,3 +1,12 @@
 .container{
     margin: 12rem 0;
+
+    &__lista{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        gap: 2rem;
+        flex-wrap: wrap;
+    }
 }
