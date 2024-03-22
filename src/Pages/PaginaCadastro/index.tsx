@@ -1,4 +1,4 @@
-import { Formulario } from '../../Components/Formulario';
+import { Formulario } from '../../Components/Footer/Formulario';
 import styles from './PaginaCadastro.module.scss';
 
 export const PaginaCadastro = () => {
