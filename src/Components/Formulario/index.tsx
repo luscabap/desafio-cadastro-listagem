@@ -24,6 +24,16 @@ export const Formulario: React.FC = () => {
         const novaListaProdutos = [...produtosCadastrados, novoProduto];
 
         localStorage.setItem("produtos", JSON.stringify(novaListaProdutos));
+
+        if (nomeProduto.length >= 3 && descricaoProduto.length >= 8 && valorProduto > 0){
+            alert("Produto adicionado com sucesso");
+            setNomeProduto("");
+            setDescricaoProduto("");
+            setValorProduto(0);
+            setDisponivel(false);
+        } else {
+            alert("Falha ao cadastrar o produto. Por favor, revise as informações preenchidas")
+        }
     }
 
     return (
