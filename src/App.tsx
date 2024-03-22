@@ -11,7 +11,7 @@ function App() {
       <BrowserRouter>
         <Header titulo={"Desafio Produtos"}/>
         <Routes>
-          <Route path='/cadastrar' element={<PaginaCadastro />}/>
+          <Route path='/' element={<PaginaCadastro />}/>
           <Route path='/listar' element={<PaginaListagem />}/>
         </Routes>
         <Footer 

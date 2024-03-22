@@ -12,7 +12,7 @@ export const Header =  ({ titulo }: IPropsHeader) => {
             <h1 className={styles.container__titulo}>{titulo}</h1>
             <ul className={styles.container__lista}>
             <Link 
-                to="/cadastrar"
+                to="/"
                 className={styles.container__lista__item}
             >
                 Cadastrar Produtos
