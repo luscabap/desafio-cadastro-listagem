@@ -1,10 +1,8 @@
 import { useState } from "react";
 import styles from './Formulario.module.scss';
-import { useNavigate } from "react-router-dom";
 import { IFormularioProps } from "../../interface/IFormularioProps";
 
 export const Formulario: React.FC = () => {
-    const navigate = useNavigate();
 
     const [nomeProduto, setNomeProduto] = useState<string>("");
     const [descricaoProduto, setDescricaoProduto] = useState<string>("");
@@ -14,14 +12,18 @@ export const Formulario: React.FC = () => {
     const cadastrarProduto = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
-        const produtoCadastrado: IFormularioProps = {
+        const novoProduto: IFormularioProps = {
             nome_produto: nomeProduto,
             descricao_produto: descricaoProduto,
             valor_produto: valorProduto,
             disponivel: disponivel,
-        }
+        };
 
-        navigate("/listar", { state: { produto: produtoCadastrado} });
+        const produtosCadastrados = JSON.parse(localStorage.getItem("produtos") || "[]");
+
+        const novaListaProdutos = [...produtosCadastrados, novoProduto];
+
+        localStorage.setItem("produtos", JSON.stringify(novaListaProdutos));
     }
 
     return (
