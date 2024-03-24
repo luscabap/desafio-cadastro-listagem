@@ -2,13 +2,12 @@ import styles from './Footer.module.scss'
 
 interface IFooterProps {
     autor: string,
-    email: string
 }
 
-export const Footer = ({ autor, email }: IFooterProps) => {
+export const Footer = ({ autor }: IFooterProps) => {
     return (
         <div className={styles.container}>
-            <p>Site desenvolvido por <abbr title={email}>{autor}</abbr> | Todo os direitos reservados 2024 &copy;</p>
+            <p>Site desenvolvido por <a href='https://portfolio-luscabap.vercel.app/' target='_blank'>{autor}</a> | Todo os direitos reservados 2024 &copy;</p>
         </div>
     )
 }

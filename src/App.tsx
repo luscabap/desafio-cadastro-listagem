@@ -16,7 +16,6 @@ function App() {
         </Routes>
         <Footer 
           autor='Lucas Baptista'
-          email='lucasbaptistasilva.dev@gmail.com'
         />
       </BrowserRouter>
     </div>

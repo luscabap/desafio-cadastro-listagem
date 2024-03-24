@@ -1,6 +1,6 @@
 import { useState } from "react";
 import styles from './Formulario.module.scss';
-import { IFormularioProps } from "../../../interface/IFormularioProps";
+import { IFormularioProps } from "../../interface/IFormularioProps";
 
 export const Formulario: React.FC = () => {
 

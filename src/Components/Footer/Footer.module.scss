@@ -4,8 +4,12 @@
         font-size: 18px;
         font-weight: 300;
 
-        abbr {
+        a {
             text-decoration: none;
+            color: #000;
+            background-color: #FFF;
+            padding: 0.3rem 0.5rem;
+            border-radius: 1rem;
         }
     }
 }
